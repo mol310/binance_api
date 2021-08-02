@@ -74,7 +74,7 @@ class User extends Request
      * */
     public function getBalance(array $data=[]){
         $this->type='GET';
-        $this->path='/fapi/v1/balance';
+        $this->path='/fapi/v2/balance';
         $this->data=array_merge($this->data,$data);
         return $this->exec();
     }
@@ -84,7 +84,7 @@ class User extends Request
      * */
     public function getAccount(array $data=[]){
         $this->type='GET';
-        $this->path='/fapi/v1/account';
+        $this->path='/fapi/v2/account';
         $this->data=array_merge($this->data,$data);
         return $this->exec();
     }
