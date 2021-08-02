@@ -40,6 +40,16 @@ class Trade extends Request
     }
 
     /*
+     * GET /fapi/v1/multiAssetsMargin (HMAC SHA256)
+     */
+    public function getOrder(array $data=[]){
+        $this->type='get';
+        $this->path='/fapi/v1/order';
+        $this->data=array_merge($this->data,$data);
+        return $this->exec();
+    }
+    
+    /*
      *POST /fapi/v1/order (HMAC SHA256)
      */
     public function postOrder(array $data=[]){
